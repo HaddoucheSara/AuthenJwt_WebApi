@@ -1,10 +1,13 @@
-using Authentification.JWT.DAL.Data.Context;
+
 
 using Authentification.JWT.Service.Profiles;
 using Authentification.JWT.Service.Services;
-using Microsoft.EntityFrameworkCore;
+using NLog;
+
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.OpenApi.Models;
+using NLog.Web;
+
 
 
 namespace Authentification.JWT.WebAPI
@@ -14,7 +17,10 @@ namespace Authentification.JWT.WebAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //// Ajout de AutoMapper 
+
+          
+
+            // Ajout de AutoMapper 
             builder.Services.AddAutoMapper(typeof(UserProfile));
            
 
@@ -76,6 +82,11 @@ namespace Authentification.JWT.WebAPI
         }
     });
             });
+            // Clears built-in providers (console, debug, etc.)
+            builder.Logging.ClearProviders();
+            // Set NLog as the logging provider for the application.
+            // Configures the host to use NLog
+            builder.Host.UseNLog();
 
             var app = builder.Build();
 
