@@ -11,6 +11,6 @@ namespace Authentification.JWT.DAL.Entities
         public int Id { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
-        public string PasswordHash { get; set; } // Le mot de passe est stocké sous forme hachée
+        public string PasswordHash { get; set; } 
     }
 }

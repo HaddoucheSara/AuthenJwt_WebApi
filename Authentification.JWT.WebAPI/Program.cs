@@ -1,5 +1,5 @@
 using Authentification.JWT.DAL.Data.Context;
-using Authentification.JWT.DAL.Repositories;
+
 using Authentification.JWT.Service.Profiles;
 using Authentification.JWT.Service.Services;
 using Microsoft.EntityFrameworkCore;
@@ -14,14 +14,12 @@ namespace Authentification.JWT.WebAPI
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            //// Ajoute de AutoMapper 
+            //// Ajout de AutoMapper 
             builder.Services.AddAutoMapper(typeof(UserProfile));
-            //// Ajouter le DbContext
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+           
 
-            // Ajouter d'autres services nécessaires
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            // Appeler la configuration des services
+            Authentification.JWT.Service.ServiceConfiguration.ConfigureServices(builder.Services, builder.Configuration);
 
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IJwtService, JwtService>();

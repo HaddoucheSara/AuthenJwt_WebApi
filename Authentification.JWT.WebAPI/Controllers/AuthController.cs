@@ -1,6 +1,4 @@
-﻿
-using Authentification.JWT.DAL.Entities;
-using Authentification.JWT.Service.Services;
+﻿using Authentification.JWT.Service.Services;
 using Authentification.JWT.WebAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 
@@ -26,16 +24,8 @@ namespace Authentication.JWT.WebAPI.Controllers
             {
                
                
-                var user = new User()
-                {
-                    Username = model.Username,
-                    Email = model.Email,
-                    PasswordHash = BCrypt.Net.BCrypt.HashPassword(model.Password)
-                };
-
-                await _userService.RegisterUserAsync(user.Username,user.Email,user.PasswordHash);
-
-                return Ok("User registered successfully.");
+                var userDto = await _userService.RegisterUserAsync(model.Username, model.Email, BCrypt.Net.BCrypt.HashPassword(model.Password));
+                return Ok(new { Message = "User registered successfully.", User = userDto });
             }
 
             catch (Exception ex)
@@ -51,18 +41,18 @@ namespace Authentication.JWT.WebAPI.Controllers
         {
             try
             {
-                // Appeler la méthode LoginUserAsync du service pour valider l'utilisateur
+               
                 var userDto = await _userService.LoginUserAsync(model.Username, model.Password);
 
-                // Générer le token JWT en utilisant l'ID de l'utilisateur
+                
                 var token = _jwtService.GenerateToken(userDto.Id);
 
-                // Retourner le token dans la réponse
+            
                 return Ok(new { Token = token });
             }
             catch (Exception ex)
             {
-                // Si une exception est levée (comme "Invalid credentials"), retourner une réponse Unauthorized
+               
                 return Unauthorized(ex.Message);
             }
         }
