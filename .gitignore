@@ -1,0 +1,15 @@
+# Dossier de Visual Studio
+.vs/
+
+# Fichiers de build
+bin/
+obj/
+
+# Logs
+*.log
+
+# Fichiers de configuration utilisateur
+*.user
+*.suo
+
+

@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentification.JWT.WebAPI", "Authentification.JWT.WebAPI\Authentification.JWT.WebAPI.csproj", "{4BE9FACD-AB65-41EA-AE3A-298A45070C69}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentification.JWT.Service", "Authentification.JWT.Service\Authentification.JWT.Service.csproj", "{DB483F3D-2981-4F20-ACD9-39EF1262E1DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Authentification.JWT.DAL", "Authentification.JWT.DAL\Authentification.JWT.DAL.csproj", "{D26DC030-D731-40D7-8A9B-5B4D80D1B344}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BE9FACD-AB65-41EA-AE3A-298A45070C69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BE9FACD-AB65-41EA-AE3A-298A45070C69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BE9FACD-AB65-41EA-AE3A-298A45070C69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BE9FACD-AB65-41EA-AE3A-298A45070C69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB483F3D-2981-4F20-ACD9-39EF1262E1DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB483F3D-2981-4F20-ACD9-39EF1262E1DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB483F3D-2981-4F20-ACD9-39EF1262E1DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB483F3D-2981-4F20-ACD9-39EF1262E1DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D26DC030-D731-40D7-8A9B-5B4D80D1B344}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D26DC030-D731-40D7-8A9B-5B4D80D1B344}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D26DC030-D731-40D7-8A9B-5B4D80D1B344}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D26DC030-D731-40D7-8A9B-5B4D80D1B344}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0FFD1BDC-FDCE-4FB6-AAB3-DA8F3CCA4161}
+	EndGlobalSection
+EndGlobal
