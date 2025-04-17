@@ -4,6 +4,9 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	 
+		  <_FunctionsSkipCleanOutput>true</_FunctionsSkipCleanOutput>
+
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,8 +22,8 @@
     <PackageReference Include="NLog" Version="5.4.0" />
     <PackageReference Include="NLog.Web.AspNetCore" Version="5.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.7.0" />
-	  <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="7.0.3" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.8.0" />
+	  <PackageReference Include="Microsoft.IdentityModel.Protocols" Version="8.8.0" />
   </ItemGroup>
 
   <ItemGroup>
