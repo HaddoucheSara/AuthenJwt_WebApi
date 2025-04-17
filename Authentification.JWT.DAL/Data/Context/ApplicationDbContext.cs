@@ -16,7 +16,7 @@ namespace Authentification.JWT.DAL.Data.Context
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=tcp:mymicroappserver.database.windows.net,1433;Initial Catalog=MyMicroAppDb;Persist Security Info=False;User ID=sara;Password=azureAzure@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer(@"Server=tcp:mymicroappserver.database.windows.net,1433;Initial Catalog=MyMicroAppDb;Persist Security Info=False;User ID=sara;Password=azureAzure@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
     }
