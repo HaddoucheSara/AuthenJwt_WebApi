@@ -3,15 +3,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Authentification.JWT.DAL.Data.Context
 {
-    public class ApplicationDbContext:DbContext
+    public class ApplicationDbContext : DbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-        public  DbSet<User> Users { get; set; }
+
+        public DbSet<User> Users { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("
-    DefaultConnection":"Server=tcp:mymicroappserver.database.windows.net,1433;Initial Catalog=MyMicroAppDb;Persist Security Info=False;User ID=sara;Password=azureAzure@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer("Server=tcp:mymicroappserver.database.windows.net,1433;Initial Catalog=MyMicroAppDb;Persist Security Info=False;User ID=sara;Password=azureAzure@123;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
     }
 }
